@@ -65,4 +65,12 @@ public class TestMaximum {
         Object[] arr = {"Banana", "Apple", "Peach"};
         Assert.assertEquals(arr[2], checkMax.findGenericMaximum(arr));
     }
+
+    @Test
+    public void name() {
+        Object[] arr = {"Banana", "Apple", "Peach"};
+        Maximum checkMax=new Maximum(arr);
+        Assert.assertEquals(arr[2], checkMax.findGenericMaximum1());
+
+    }
 }

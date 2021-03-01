@@ -9,9 +9,21 @@ public class Maximum<T>{
 
     public Maximum() {}
 
-    public <T> Comparable findGenericMaximum(T[] myNumber){
+    public <T> T findGenericMaximum(T[] myNumber){
         List myNumberList = Arrays.asList(myNumber);
-        Comparable max = Collections.max(myNumberList);
+        T max = (T)Collections.max(myNumberList);
+        toPrint(max);
         return max;
+    }
+
+    public <T> T findGenericMaximum1(){
+        List list = Arrays.asList(inputArray);
+        T max = (T)Collections.max(list);
+        toPrint(max);
+        return max;
+    }
+
+    private <T> void toPrint(T a) {
+        System.out.println(a);
     }
 }
