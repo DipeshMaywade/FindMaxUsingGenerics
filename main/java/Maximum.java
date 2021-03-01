@@ -1,8 +1,9 @@
 import java.util.*;
 
 public class Maximum {
-    public String findMax(List myList){
-        String maxValue = (String) Collections.max(myList);
+
+    public <E> E findMax(List myList){
+        E maxValue = (E) Collections.max(myList);
         return maxValue;
     }
 }

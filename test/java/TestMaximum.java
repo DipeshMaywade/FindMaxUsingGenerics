@@ -6,23 +6,23 @@ import java.util.List;
 public class TestMaximum {
 
     @Test
-    void maxNumberAtFirst() {
+     public void maxNumberAtFirst() {
         Maximum maxValue = new Maximum();
-        List<String> list = Arrays.asList("yellow", "blue", "white");
+        List <String> list = Arrays.asList("yellow", "blue", "white");
         Assertions.assertEquals("yellow", maxValue.findMax(list));
     }
 
     @Test
     void maxNumberAtSecond() {
         Maximum maxValue = new Maximum();
-        List<String> list = Arrays.asList("blue", "yellow", "white");
-        Assertions.assertEquals("yellow", maxValue.findMax(list));
+        List <Integer> list = Arrays.asList(11,45,3);
+        Assertions.assertEquals(45, (Integer) maxValue.findMax(list));
     }
 
     @Test
     void maxNumberAtThird() {
         Maximum maxValue = new Maximum();
-        List<String> list = Arrays.asList("blue", "red", "yellow");
-        Assertions.assertEquals("yellow", maxValue.findMax(list));
+        List list = Arrays.asList(11.2, 43.2, 33.2);
+        Assertions.assertEquals(43.2, maxValue.findMax(list));
     }
 }
