@@ -1,9 +1,17 @@
 import java.util.*;
 
-public class Maximum {
+public class Maximum<T>{
+    private T[] inputArray;
 
-    public <E> E findMax(List myList){
-        E maxValue = (E) Collections.max(myList);
-        return maxValue;
+    public Maximum(T[] inputArray) {
+        this.inputArray = inputArray;
+    }
+
+    public Maximum() {}
+
+    public <T> Comparable findGenericMaximum(T[] myNumber){
+        List myNumberList = Arrays.asList(myNumber);
+        Comparable max = Collections.max(myNumberList);
+        return max;
     }
 }

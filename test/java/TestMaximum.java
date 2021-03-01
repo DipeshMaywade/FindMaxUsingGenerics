@@ -1,28 +1,68 @@
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import java.util.Arrays;
-import java.util.List;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class TestMaximum {
 
     @Test
-     public void maxNumberAtFirst() {
-        Maximum maxValue = new Maximum();
-        List <String> list = Arrays.asList("yellow", "blue", "white");
-        Assertions.assertEquals("yellow", maxValue.findMax(list));
+    public void givenIntMaximumAtFirstPosition() {
+        Maximum checkMax = new Maximum();
+        Object[] arr = {10, 2, 1,5,4};
+        Assert.assertEquals(arr[0], checkMax.findGenericMaximum(arr));
     }
 
     @Test
-    void maxNumberAtSecond() {
-        Maximum maxValue = new Maximum();
-        List <Integer> list = Arrays.asList(11,45,3);
-        Assertions.assertEquals(45, (Integer) maxValue.findMax(list));
+    public void givenIntMaximumAtSecondPosition() {
+        Maximum checkMax = new Maximum();
+        Object[] arr = {2,10,1,3,7};
+        Assert.assertEquals(arr[1], checkMax.findGenericMaximum(arr));
     }
 
     @Test
-    void maxNumberAtThird() {
-        Maximum maxValue = new Maximum();
-        List list = Arrays.asList(11.2, 43.2, 33.2);
-        Assertions.assertEquals(43.2, maxValue.findMax(list));
+    public void givenIntMaximumAtThirdPosition() {
+        Maximum checkMax = new Maximum();
+        Object[] arr = {2,1,10};
+        Assert.assertEquals(arr[2], checkMax.findGenericMaximum(arr));
+    }
+
+    @Test
+    public void givenFloatMaximumAtFirstPosition() {
+        Maximum checkMax = new Maximum();
+        Object[] arr = {10.0, 1.0, 2.0};
+        Assert.assertEquals(arr[0], checkMax.findGenericMaximum(arr));
+    }
+
+    @Test
+    public void givenFloatMaximumAtSecondPosition() {
+        Maximum checkMax = new Maximum();
+        Object[] arr = {2.0, 10.0, 1.0};
+        Assert.assertEquals(arr[1], checkMax.findGenericMaximum(arr));
+    }
+
+    @Test
+    public void givenFloatMaximumAtThirdPosition() {
+        Maximum checkMax = new Maximum();
+        Object[] arr = {2.0, 1.0, 10.0};
+        Assert.assertEquals(arr[2], checkMax.findGenericMaximum(arr));
+    }
+
+    @Test
+    public void givenStringMaximumAtFirstPosition() {
+        Maximum checkMax = new Maximum();
+        Object[] arr = {"Peach", "Banana", "Apple"};
+        Assert.assertEquals(arr[0], checkMax.findGenericMaximum(arr));
+    }
+
+    @Test
+    public void givenStringMaximumAtSecondPosition() {
+        Maximum checkMax = new Maximum();
+        Object[] arr = {"Apple", "Peach", "Banana"};
+        Assert.assertEquals(arr[1], checkMax.findGenericMaximum(arr));
+    }
+
+    @Test
+    public void givenStringMaximumAtThirdPosition() {
+        Maximum checkMax = new Maximum();
+        Object[] arr = {"Banana", "Apple", "Peach"};
+        Assert.assertEquals(arr[2], checkMax.findGenericMaximum(arr));
     }
 }
