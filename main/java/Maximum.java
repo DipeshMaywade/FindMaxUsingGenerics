@@ -1,9 +1,8 @@
 import java.util.*;
 
 public class Maximum {
-
-    public int findMax(List myList){
-        int maxValue = (int) Collections.max(myList);
+    public double findMax(List myList){
+        double maxValue = (double) Collections.max(myList);
         return maxValue;
     }
 }
